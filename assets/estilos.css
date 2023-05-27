@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    font-family:monospace, Arial, Helvetica, sans-serif;
+}
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "header" "buscador" "main" "footer";
+    grid-template-rows: 15% 10% auto 10%;
+
+}
+header {
+    grid-area: header;
+    background-color: rgb(54, 252, 4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem 0.5rem 1.5rem;
+    font-size: 1.25rem;
+}
+menu {
+    display: none;
+}
+menu ul{
+    list-style-type: none;
+}
+.buscador {
+    grid-area: buscador;
+    background-color: rgb(101, 255, 62);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    }
+select {
+    width: 60%;
+    text-align: center;
+}
+main img{
+    width: 25rem;
+    height: 15rem;
+}
+
+main {
+    grid-area: main;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.paginacion {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;    
+}
+
+.paginacion div{
+    border: black 1px solid;
+    float: left;
+    padding: 0.3rem;
+    margin: 0.3rem;
+}
+
+footer {
+    background-color: rgb(101, 255, 62);
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+}
+
+.carddesk{
+    display: none;
+}
+
+.cardmobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.items button {
+    background-color: rgb(101, 255, 62);
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+@media (min-width: 576px){
+    body {
+        grid-template-areas: "header buscador" "header main" "footer main";
+        grid-template-columns: 15% 85%;
+        grid-template-rows: 10% auto 12%;
+    }
+  
+    header {
+        flex-direction: column;
+        justify-content: flex-start;
+        min-width: 6rem;
+    }
+    .hamburguesa {
+        display: none;
+    }
+    
+    menu{
+        display: flex;
+        padding: 3rem 2rem 2rem 2rem;
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 2rem;
+    }
+    footer p{
+        padding-top: 1rem;
+    }
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .carddesk{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+   
+}
