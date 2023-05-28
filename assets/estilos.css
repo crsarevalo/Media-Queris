@@ -99,7 +99,10 @@ footer {
     header {
         flex-direction: column;
         justify-content: flex-start;
-        min-width: 6rem;
+        min-width: auto;
+    }
+    .encabezado{
+        min-width: fit-content;
     }
     .hamburguesa {
         display: none;
@@ -107,17 +110,17 @@ footer {
     
     menu{
         display: flex;
-        padding: 3rem 2rem 2rem 2rem;
+        padding: 3rem 0 0 1rem;
     }
     footer {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding-top: 2rem;
+        padding-top: 1rem;
     }
     footer p{
-        padding-top: 1rem;
+        padding-top: 0.5rem;
     }
     .items {
         display: flex;
